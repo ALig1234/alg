@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Webpage</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: url('https://lumiere-a.akamaihd.net/v1/images/sa_pixar_virtualbg_coco_16x9_9ccd7110.jpeg') center center ;
+        }
+
+        header {
+            background: url('https://wallpapers.com/images/hd/minecraft-green-creeper-face-pixel-1omshoj9zvnmez8p.jpg') center center ;
+            background-size: cover;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            background-position: fixed;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            background: url('https://c4.wallpaperflare.com/wallpaper/925/671/595/action-adventure-fantasy-fighting-wallpaper-preview.jpg') ;
+            background-size: cover;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-position: fixed;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        #opinionsContainer {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>hello and wlc to my first weepsit . my name is ali but you can call me ALG . i like programition and 
+            ican programition with a multiple of programation-languege and i like haking . i have 15 years old and i'm mrrocan.
+            so this is me and that my first weepsit.
+            
+        </h1>
+        <p>Web Developer</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#discord">Discord</a> |
+        <a href="#information">Information</a> |
+        <a href="#feedback">Feedback</a>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section>
+        <h2 id="discord">Discord</h2>
+        <p>Connect with me on Discord: CAIN / 12alig21 </p>
+
+        <!-- Information Section -->
+        <h2 id="information">Information</h2>
+        <p>This is a professional webpage to showcase my skills and projects.</p>
+
+        <!-- Feedback Section -->
+        <h2 id="feedback">Feedback</h2>
+        <p>Share your thoughts or give feedback:</p>
+        <form id="feedbackForm">
+            <label for="nameInput">Your Name:</label><br>
+            <input type="text" id="nameInput" name="name" required><br>
+            <label for="feedbackInput">Your Opinion:</label><br>
+            <textarea id="feedbackInput" name="feedback" rows="4" cols="50" required></textarea><br>
+            <input type="submit" value="Submit Feedback">
+        </form>
+
+        <!-- Display Comments Section -->
+        <h2>Comments</h2>
+        <div id="CommentsContainer"></div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        &copy; 2023 im ALG
+    </footer>
+
+    <!-- Google Fonts - Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <!-- JavaScript to Handle Form Submission and Display Comments -->
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get user input
+            var name = document.getElementById('nameInput').value;
+            var feedback = document.getElementById('feedbackInput').value;
+
+            // Display the Comments
+            displayComments(name, feedback);
+
+            // Clear the form
+            document.getElementById('feedbackForm').reset();
+        });
+
+        function displayComments(name, feedback) {
+            var CommentsContainer = document.getElementById('CommentsContainer');
+
+            // Create a new Comment element
+            var CommentsElement = document.createElement('div');
+            CommentsElement.innerHTML = '<strong>' + name + ':</strong> ' + feedback;
+
+            // Append the Comments to the container
+            CommentsContainer.appendChild(CommentsElement);
+        }
+    </script>
+
+</body>
+</html>
+header-background.jpg
